@@ -6,7 +6,7 @@ variable "cluster_name" {
 }
 
 variable "resource_environment" {
-  type = string
+  type        = string
   description = "Denotes which environment these resources are being created for."
   validation {
     condition     = var.resource_category == "qa" || var.resource_category == "prod"
