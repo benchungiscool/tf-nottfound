@@ -27,5 +27,4 @@ resource "hcloud_server" "nodes" {
     ipv4_enabled = true
     ipv6_enabled = true
   }
-
 }
