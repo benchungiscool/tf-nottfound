@@ -26,9 +26,9 @@ variable "node_count" {
   description = "Number of worker nodes to spin up."
 }
 
-variable "ssh_keys" {
-  type        = list(string)
-  description = "List of ssh pubkeys"
+variable "ssh_key" {
+  type        = string
+  description = "ssh pubkey"
 }
 
 variable "master_size_override" {
