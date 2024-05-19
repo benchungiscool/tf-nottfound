@@ -1,4 +1,4 @@
 locals {
-  def_master = "cx11"
-  def_node   = "cpx11"
+  default_master = "cx11"
+  default_node   = "cpx11"
 }
