@@ -18,7 +18,7 @@ resource "hcloud_server" "nodes" {
   count = var.node_count
 
   name                     = "${var.cluster_name}-${var.resource_category}-node-${count.index}"
-  server_type              = var.node_size_override == "UNSET" ? default_node : var.node_size_override
+  server_type              = var.node_size_override == "UNSET" ? local.default_node : var.node_size_override
   shutdown_before_deletion = true
 
   ssh_keys = var.ssh_keys
