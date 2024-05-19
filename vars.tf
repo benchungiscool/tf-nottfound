@@ -9,7 +9,7 @@ variable "resource_environment" {
   type = string
   description = "Denotes which environment these resources are being created for."
   validation {
-    condition     = var.resource_category == "qa" | var.resource_category == "prod"
+    condition     = var.resource_category == "qa" || var.resource_category == "prod"
     error_message = "ERROR: var.resource_category must either be qa or prod."
   }
 }
@@ -20,11 +20,11 @@ variable "create" {
   default     = false
 }
 
-variable "node_count" [
+variable "node_count" {
   type        = integer
   default     = 2
   description = "Number of worker nodes to spin up."
-]
+}
 
 variable "ssh_keys" {
   type        = list(string)
